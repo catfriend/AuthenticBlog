@@ -8,6 +8,7 @@ class UsersController < ApplicationController
 
     if @user.save
       flash[:notice] = "You are now a user!"
+      sign_in @user
       redirect_to root_url
     else
       render 'new'
