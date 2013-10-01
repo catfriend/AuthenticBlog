@@ -26,21 +26,20 @@
 
 <div id="nav">
 <ul>
-  <li><a href="musings.com/home" alt="Home">Home   |</a></li>
-  <li><a href="musings.com/about" alt="About">   About   |</a></li>
-  <li><a href="musings.com/tutorials" alt="Tutorials">   Tutorials   |</a></li>
-  <li><a href="musings.com/places" alt="Places">   Places   |</a></li>
+  <li><%= link_to 'Home  |', root_path %></li>
+  <li><%= link_to 'About  |', about_path %></li>
+  <li><%= link_to 'Posts  |', posts_path %></li>
+
 </ul>
 
 
 <div id="photobar">
-   <%= image_tag 'preferredsunset.jpg', alt: 'Kochi Sunset' %>
-<!-- <img id= "preferredSunset" src="./Images/preferredsunset.jpg" alt="Kochi Sunset"/> -->
-<img id= "snowyOwl" src="./Images/snowy4.jpg" alt="Snowy Owl"/>
-<img id="cheetah" src="./Images/samburuCheetah.jpg" alt="Cheetah"/>
-<img id="maduraiElephant" src="./Images/maduraielephant.jpg" alt="Madurai Elephant"/>
-<img id= "Tiger" src= "./Images/tiger1.jpg" alt="Tiger"/>
-<img id= "gorilla" src="./Images/gorillas29.jpg" alt="Gorilla"/>
+  <%= image_tag 'preferredSunset.jpg', alt: 'Kochi Sunset' %>
+  <%= image_tag 'Snowy4.jpg', alt: 'Snowy Owl' %>
+  <%= image_tag 'samburuCheetah.jpg', alt: 'cheetah' %>
+  <%= image_tag 'MaduraiElephant.jpg', alt: 'Madurai Elephant' %>
+  <%= image_tag 'Tiger1.jpg', alt: 'Tiger' %>
+  <%= image_tag 'gorillas29.jpg', alt: 'Gorilla' %>
 </div>
 
 <%= yield %>
