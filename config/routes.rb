@@ -1,5 +1,5 @@
 AuthenticBlog::Application.routes.draw do
-  get "sessions/new"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -7,6 +7,7 @@ AuthenticBlog::Application.routes.draw do
 
   resources :users, only: [:new, :create]
   resources :sessions, only: [:create, :destroy]
+  resources :posts
 
   get '/login', to: 'sessions#new'
   get '/logout', to: 'sessions#destroy'

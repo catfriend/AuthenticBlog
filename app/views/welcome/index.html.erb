@@ -1,7 +1,9 @@
-<h1>Welcome Index</h1>
+<h1>Home</h1>
 
 <%= link_to 'About', about_path %>
 <%= link_to 'Private', private_path %><br>
+<%= link_to "My Blog", controller: "posts" %>
+
 
 <% if current_user? %>
 <ul>
