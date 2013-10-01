@@ -3,18 +3,18 @@ AuthenticBlog::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-get '/private', to: 'private#static'
+  get '/private', to: 'private#static'
 
-resources :users, only: [:new, :create]
-resources :sessions, only: [:create]
+  resources :users, only: [:new, :create]
+  resources :sessions, only: [:create, :destroy]
 
-get '/login', to: 'sessions#new'
-get '/logout', to: 'sessions#destroy'
+  get '/login', to: 'sessions#new'
+  get '/logout', to: 'sessions#destroy'
 
-get '/about', to: 'welcome#about', as: :about
+  get '/about', to: 'welcome#about', as: :about
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

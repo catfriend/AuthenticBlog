@@ -1,7 +1,7 @@
 class PrivateController < ApplicationController
   before_action :user_logged_in!
 
-  def statoc
+  def static
 
   end
 end
